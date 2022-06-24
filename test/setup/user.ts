@@ -1,6 +1,17 @@
-import {SignerWithAddress} from '@nomiclabs/hardhat-ethers/dist/src/signers';
+import {SignerWithAddress} from '@nomiclabs/hardhat-ethers/signers';
 import {Contract} from 'ethers';
 import {ethers} from 'hardhat';
+
+export async function setupNamedUsers<T extends {[contractName: string]: Contract}>(
+  namedAccounts: {[name: string]: string},
+  contracts: T
+): Promise<{[name: string]: {address: string; signer: SignerWithAddress} & T}> {
+  const users: {[name: string]: {address: string; signer: SignerWithAddress} & T} = {};
+  for (const entry of Object.entries(namedAccounts)) {
+    users[entry[0]] = await setupUser(entry[1], contracts);
+  }
+  return users;
+}
 
 export async function setupUsers<T extends {[contractName: string]: Contract}>(
   addresses: string[],

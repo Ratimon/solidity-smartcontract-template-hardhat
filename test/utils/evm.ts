@@ -3,7 +3,7 @@
 import * as hre from 'hardhat';
 import { network,  } from 'hardhat';
 
-import {SignerWithAddress} from '@nomiclabs/hardhat-ethers/dist/src/signers';
+import {SignerWithAddress} from '@nomiclabs/hardhat-ethers/signers';
 
 import {
     utils,

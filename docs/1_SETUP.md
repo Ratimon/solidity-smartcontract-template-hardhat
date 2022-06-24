@@ -10,9 +10,9 @@ There are multiple ways of installing Node.js on MacOS. We will be using [Node V
 
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash
-nvm install 12.19.1
-nvm use 12.19.1
-nvm alias default 12.19.1
+nvm install 16.14.2
+nvm use 116.14.2
+nvm alias default 16.14.2
 npm install npm --global # Upgrade npm to the latest version
 ```
 
