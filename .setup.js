@@ -16,6 +16,9 @@ fs.emptyDirSync('_lib/');
 fs.emptyDirSync('_lib/openzeppelin/contracts');
 fs.copySync('node_modules/@openzeppelin/contracts', '_lib/openzeppelin/contracts', {dereference: true});
 
+fs.emptyDirSync('_lib/openzeppelin/contracts-upgradeable');
+fs.copySync('node_modules/@openzeppelin/contracts-upgradeable', '_lib/openzeppelin/contracts-upgradeable', {dereference: true});
+
 fs.emptyDirSync('_lib/rari-capital/solmate/src');
 fs.copySync('node_modules/@rari-capital/solmate/src', '_lib/rari-capital/solmate/src', {dereference: true});
 

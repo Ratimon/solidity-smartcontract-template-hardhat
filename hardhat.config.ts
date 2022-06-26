@@ -72,6 +72,16 @@ const config: HardhatUserConfig = {
             runs: 200
           }
         }
+      },
+
+      {
+        version: "0.8.15",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        }
       }
       
     ],
@@ -156,6 +166,7 @@ const config: HardhatUserConfig = {
     staging: {
       url: node_url('rinkeby'),
       accounts: accounts('rinkeby'),
+      tags: ['staging']
     },
     production: {
       url: node_url('mainnet'),
