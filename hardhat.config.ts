@@ -179,6 +179,7 @@ const config: HardhatUserConfig = {
     rinkeby: {
       url: node_url('rinkeby'),
       accounts: accounts('rinkeby'),
+      tags: ['staging']
     },
     kovan: {
       url: node_url('kovan'),
